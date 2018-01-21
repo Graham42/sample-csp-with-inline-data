@@ -1,0 +1,32 @@
+{
+  "name": "@graham42/start-node-project",
+  "version": "0.0.1",
+  "description": "Automate project setup",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "format": "prettier --write **/*.{js,jsx,ts,tsx,vue,json,css,scss,less,md}",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graham42/start-node-project.git"
+  },
+  "keywords": [
+    "scaffold",
+    "boilerplate"
+  ],
+  "author": "Graham McGregor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Graham42/start-node-project/issues"
+  },
+  "homepage": "https://github.com/Graham42/start-node-project#readme",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-prettier": "^2.9.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2"
+  }
+}
