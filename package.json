@@ -1,8 +1,7 @@
 {
-  "name": "@graham42/start-node-project",
+  "name": "@graham42/sample-csp-with-inline-data",
   "version": "0.0.1",
-  "description": "Automate project setup",
-  "main": "index.js",
+  "description": "Examples of how to securely configure a CSP and still have inline data.",
   "scripts": {
     "precommit": "lint-staged",
     "format": "prettier --write **/*.{js,jsx,ts,tsx,vue,json,css,scss,less,md}",
@@ -10,18 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Graham42/start-node-project.git"
+    "url": "git+https://github.com/Graham42/sample-csp-with-inline-data.git"
   },
-  "keywords": [
-    "scaffold",
-    "boilerplate"
-  ],
   "author": "Graham McGregor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Graham42/start-node-project/issues"
+    "url": "https://github.com/Graham42/sample-csp-with-inline-data/issues"
   },
-  "homepage": "https://github.com/Graham42/start-node-project#readme",
+  "homepage": "https://github.com/Graham42/sample-csp-with-inline-data#readme",
   "devDependencies": {
     "eslint": "^4.16.0",
     "eslint-config-prettier": "^2.9.0",
