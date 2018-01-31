@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Examples</h1>
+  <ol>
+    <li>
+      <a href="/unsafe-script-hacked">
+        Unsecured.
+      </a> This page will pop an alert dialog.
+    </li>
+    <li>
+      <a href="/unsafe-script-blocked">
+        Secured, but still using inline script.
+      </a> This page will have errors in the console.
+    </li>
+
+    <li>
+      <a href="/safe-example">
+        Secured, and fixed.
+      </a> This page will now show expected data.
+    </li>
+    <li>
+      <a href="/safe-parse-error">
+        Bonus round.
+      </a>
+      An attempt to inject bad data causes a parsing error that can be seen in the console.
+      Could handle this in the page logic.
+    </li>
+  </ol>
+</body>
+
+</html>

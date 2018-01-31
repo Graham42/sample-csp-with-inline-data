@@ -1,0 +1,25 @@
+<html>
+
+
+<head>
+  <link href="css/styles.css" rel="stylesheet">
+  <title>Your Birthday Card</title>
+
+  <script type="application/json" data-my-app-selector="user-data">
+      {
+        "firstName": "{{ user.firstName }}",
+        "age": {{ user.age | safe }},
+        "pet": {{ user.pet | dump | safe }}
+      }
+    </script>
+  <!-- All the page logic now lives in main.js -->
+  <script src="/js/main.js"></script>
+</head>
+
+<body>
+  <h1 id="title">Welcome</h1>
+  <p id="text"></p>
+  <p id="text2"></p>
+</body>
+
+</html>

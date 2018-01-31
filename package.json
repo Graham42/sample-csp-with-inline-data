@@ -5,6 +5,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "format": "prettier --write **/*.{js,jsx,ts,tsx,vue,json,css,scss,less,md}",
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,11 @@
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-nunjucks": "^2.2.3",
+    "mustache": "^2.3.0",
+    "nunjucks": "^3.0.1"
   }
 }

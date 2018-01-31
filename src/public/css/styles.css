@@ -1,0 +1,18 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 4rem auto;
+  padding: 0 2rem;
+  max-width: 80rem;
+  color: #444444;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.3;
+}

@@ -7,3 +7,5 @@ This is a WIP
 Using a Content Security Policy is a great tool to defend yourself against
 cross-site scripting (XSS) attacks. This repo contains several examples of how
 to / how not to do things.
+
+See post at...

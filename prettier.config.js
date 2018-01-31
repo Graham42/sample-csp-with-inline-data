@@ -9,7 +9,7 @@ module.exports = {
    * though there's no real meaningful change to it. When using the `git blame` command, it
    * looks at line by line changes and so these comma's make it more difficult to follow history.
    */
-  trailingComma: "all",
+  trailingComma: "es5",
   // markdown should be readable as plain text, so hard wrap
   proseWrap: "always",
 };

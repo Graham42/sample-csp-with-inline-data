@@ -1,0 +1,54 @@
+<html>
+
+
+<head>
+  <link href="css/styles.css" rel="stylesheet">
+  <title>Your Birthday Card</title>
+
+  <script type="text/javascript">
+    ////////////////////////////////////////////////////////////////////////////////
+    // This is the data we care about from the server
+
+    var firstName = "{{ user.firstName }}";
+    // Obviously it's a bad idea to not escape values, this is just to
+    // illustrate an example.
+    var age = {{ user.age | safe }};
+    // the 'dump' filter calls JSON.stringify on the object
+    var pet = {{ user.pet | dump }};
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // The reset of this is arbitrary page logic
+
+    function suggestRandomPet() {
+      var somePets = ["dogs", "cats", "koalas", "parrots"];
+      var randomPet = somePets[Math.floor(Math.random() * somePets.length)];
+      return randomPet;
+    }
+
+    function getRandomNumber() {
+      // chosen by fair dice roll.
+      // guaranteed to be random
+      return 4;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      //do work with the variables once the page is ready...
+      document.getElementById("title").innerText = `Happy Birthday ${firstName}`;
+      document.getElementById(
+        "text"
+      ).innerText = `Happy belated birthday! It's a great time to be ${age}!`;
+      // if the user has a pet, say hello
+      document.getElementById("text2").innerText = pet
+        ? `Say hello to ${pet.name} for us`
+        : `Have you considered getting ${getRandomNumber()} ${suggestRandomPet()}?`;
+    });
+  </script>
+</head>
+
+<body>
+  <h1 id="title">Welcome</h1>
+  <p id="text"></p>
+  <p id="text2"></p>
+</body>
+
+</html>
