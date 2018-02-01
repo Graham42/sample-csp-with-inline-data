@@ -34,8 +34,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   res.render("index");
 });
-// TODO add helmet and add the CSP, for all except this request
+
 app.get("/unsafe-script-hacked", (req, res) => {
+  // Note that we don't set a CSP here
   res.render("unsafe", { user: sampleUserHacked });
 });
 app.get("/unsafe-script-blocked", (req, res) => {
