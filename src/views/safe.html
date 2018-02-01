@@ -8,8 +8,8 @@
   <script type="application/json" data-my-app-selector="user-data">
       {
         "firstName": "{{ user.firstName }}",
-        "age": {{ user.age | safe }},
-        "pet": {{ user.pet | dump | safe }}
+        "age": {{ user.age }},
+        "pet": {{ user.pet | dump }}
       }
     </script>
   <!-- All the page logic now lives in main.js -->

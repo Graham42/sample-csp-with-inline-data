@@ -10,9 +10,7 @@
     // This is the data we care about from the server
 
     var firstName = "{{ user.firstName }}";
-    // Obviously it's a bad idea to not escape values, this is just to
-    // illustrate an example.
-    var age = {{ user.age | safe }};
+    var age = {{ user.age }};
     // the 'dump' filter calls JSON.stringify on the object
     var pet = {{ user.pet | dump }};
 

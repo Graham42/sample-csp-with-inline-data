@@ -22,7 +22,10 @@ const CSP_HEADER = {
 };
 
 app.set("views", path.join(__dirname, "views"));
-expressNunjucks(app);
+expressNunjucks(app, {
+  // this is obviously bad, but needed to illustrate the point.
+  autoescape: false,
+});
 
 app.use(express.static(path.join(__dirname, "public")));
 
