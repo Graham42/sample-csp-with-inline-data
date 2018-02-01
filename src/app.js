@@ -23,6 +23,8 @@ const CSP_HEADER = {
 
 app.set("views", path.join(__dirname, "views"));
 expressNunjucks(app, {
+  watch: true,
+  noCache: true,
   // this is obviously bad, but needed to illustrate the point.
   autoescape: false,
 });
