@@ -4,17 +4,17 @@ const expressNunjucks = require("express-nunjucks");
 
 const app = express();
 
-const sampleUserHacked = {
-  firstName: "Alfred",
-  age: "'';alert('BOOM! Bad things can happen without a CSP...');",
-  pet: null,
-};
 const sampleUser = {
   firstName: "Alfred",
   age: 33,
   pet: {
     name: "Poncho",
   },
+};
+const hackedSampleUser = {
+  firstName: "Alfred",
+  age: "'';alert('BOOM! Bad things can happen without a CSP...');",
+  pet: null,
 };
 const CSP_HEADER = {
   "Content-Security-Policy":
@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 
 app.get("/unsafe-script-hacked", (req, res) => {
   // Note that we don't set a CSP here
-  res.render("unsafe", { user: sampleUserHacked });
+  res.render("unsafe", { user: hackedSampleUser });
 });
 app.get("/unsafe-script-blocked", (req, res) => {
   res.set(CSP_HEADER);
@@ -49,7 +49,7 @@ app.get("/safe-example", (req, res) => {
 });
 app.get("/safe-parse-error", (req, res) => {
   res.set(CSP_HEADER);
-  res.render("safe", { user: sampleUserHacked });
+  res.render("safe", { user: hackedSampleUser });
 });
 
 app.listen(3000, () =>
