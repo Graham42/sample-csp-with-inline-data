@@ -13,4 +13,7 @@ npm install
 npm start
 ```
 
+If you're interested in the code I recommend starting in the
+[app.js file](./src/app.js)
+
 See post at...

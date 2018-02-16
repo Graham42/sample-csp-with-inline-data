@@ -1,5 +1,5 @@
 /**
- * Find and parses an inline JSON script block with the given selector, and
+ * Find and parse an inline JSON script block with the given selector, and
  * return the data.
  *
  * @param {string} dataSelect
@@ -15,6 +15,9 @@ function getData(dataSelect) {
     console.error(`Couldn't read JSON data from ${dataSelect}`, err);
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// Page logic
 
 function suggestRandomPet() {
   var somePets = ["dogs", "cats", "koalas", "parrots"];
