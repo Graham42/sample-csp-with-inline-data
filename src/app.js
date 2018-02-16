@@ -13,7 +13,7 @@ const sampleUser = {
 };
 const hackedSampleUser = {
   firstName: "Alfred",
-  age: "'';alert('BOOM! Bad things can happen without a CSP...');",
+  age: "'';alert('BOOM! 💥 Bad things can happen without a CSP...');",
   pet: null,
 };
 const CSP_HEADER = {
