@@ -1,3 +1,6 @@
+This is an example project for
+[this blog post](https://medium.com/@Graham42x/inline-data-with-a-content-security-policy-ab30dde2feb3)
+
 # Sample Project For CSP and Inline Data
 
 Using a Content Security Policy is a great tool to defend yourself against
@@ -15,5 +18,3 @@ npm start
 
 If you're interested in the code I recommend starting in the
 [app.js file](./src/app.js)
-
-See post at...
